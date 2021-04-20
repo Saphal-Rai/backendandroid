@@ -41,7 +41,7 @@ if (process.env.NODE_ENV.trim() === "development") {
 app.use(fileupload());
 
 // Set static folder
-app.use(express.static(path.join(__dirname, "images")));
+app.use(express.static(path.join(__dirname, "uploads")));
 
 // Mount routes
 app.use(auth);
@@ -51,7 +51,7 @@ app.use(cart);
 // To use the custom error message
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 90;
 
 // In order to run the server we need to call listen
 const server = app.listen(
